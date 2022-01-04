@@ -1,0 +1,213 @@
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+    box-sizing: content-box;
+}
+
+body{
+    width: 90vw;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.logo img {
+    border-radius: 10px;
+}
+
+.logo1 a{
+    font-size: 5rem;
+    text-decoration: none;
+    color:#fff;
+}
+
+#hr_header{
+    border: 2px solid #c7c7;
+    margin-bottom: 20px;
+}
+
+nav{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+#menu li{
+    list-style-type: none;
+    display: inline-flex;
+    margin: 20px 50px;
+    padding: 5px;
+}
+
+#menu li a{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 1px;
+    border-bottom: 1px solid #f53963;
+    border-right: 1px solid #013d9f;
+    border-left: none;
+    border-top: none;
+    box-shadow: 5px 10px 15px #cccccc;
+    padding: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+#apresentacao{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main h1{
+    text-align: center;
+    text-shadow: 0 4px 8px #ccc;
+}
+.apresentacao1{
+    width: 250px;
+    height: auto;
+    align-items: center;
+}
+
+.apresentacao_img{
+    width: auto;
+    margin: 10px;
+}
+
+.apresentacao_txt{
+    text-align:start ;
+    margin: 10px;
+}
+
+.mais a{
+    text-decoration: none;
+    color: #0f6339;
+    margin: 20px 10px;
+
+}
+.mais{
+    text-align: right;
+}
+
+main{}
+
+aside{}
+
+#hr_footer{
+    border: 2px solid #c7c7;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+footer{
+    position: relative;
+    line-height: 20px;
+    width:auto;
+    margin-left: 102px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* galeria */
+
+
+.card_img{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    margin: 25px;
+    /* aqui as imagens ficaram dentro de um quadro de 300px por 300px, no entanto, elas não diminuíram, o que sobrou das imagens ficou escondido com a propriedade overflow:hidden; */
+}
+
+.small_img{
+    height: 100%;
+    /* com esta propriedade, as imagens ficaram inteiras dentro das divs */
+    cursor: pointer;
+    /* o cursor:pointer; faz com que ao passar do mouse apareça a mãozinha, como se fosse um link. */
+    transition: all linear 0.4s;
+}
+
+.small_img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#modal_img{
+    width: 50%;
+    transform: scale(0);
+    transition: all linear .3s;
+}
+
+.modal_active #modal_img{
+    transform: scale(1);
+}
+
+.modal{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    /* estamos deixando o modal escondido */
+    z-index: 2000;
+    opacity: 0;
+    transition: visibity linear 0.8s, opacity 0.5s linear;
+}
+
+.modal_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* configuração do botão de fechar */
+
+#bt_close{
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 2rem;
+    font-weight: bolder;
+    border: 1px solid #fff;
+    transition: all ease-out .4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#bt_close:hover{
+    background-color: #f00;
+}
+
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}
